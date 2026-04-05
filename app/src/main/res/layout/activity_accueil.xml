@@ -9,14 +9,14 @@
     android:background="#f2f2f2"
     >
 
-    <!-- top -->
+    <!-- banner -->
     <LinearLayout
         android:id="@id/top"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="20dp"
-        android:background="#F2E6DF"
+        android:background="@drawable/banner"
 
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,6 +27,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/app_name"
+            android:textSize="20dp"
+
             android:layout_marginBottom="20dp" />
 
         <!-- welcome texte -->
@@ -65,7 +67,8 @@
         android:layout_height="wrap_content"
         android:text="@string/index_subject"
         android:layout_marginBottom="20dp"
-        android:textSize="32dp"/>
+        android:textSize="32dp"
+        android:textFontWeight="600"/>
 
         <!-- container cards -->
         <LinearLayout
@@ -76,12 +79,17 @@
 
             <!-- card -->
             <LinearLayout
+                android:id="@+id/btn_maths_exercices"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="50"
-                android:background="#BEC8F9"
+                android:background="@drawable/background_radius"
+                android:backgroundTint="@color/blue"
                 android:orientation="vertical"
-                android:padding="20dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="0dp"
                 android:layout_marginRight="20dp"
                 >
 
@@ -90,30 +98,18 @@
                     android:layout_height="wrap_content"
                     android:text="@string/subject_maths_geo"
                     android:textSize="20dp"
-                    android:layout_marginBottom="40dp"
+                    android:layout_marginBottom="20dp"
+                    android:textColor="@color/white"
+                    android:textFontWeight="600"
                     />
 
-                <Button
-                    android:id="@+id/btn_maths_exercices"
+                <ImageView
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
                     android:layout_gravity="end"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:text=">"
-                    android:textColor="#252525"
-
-                    app:backgroundTint="#f2f2f2"
-
-                    app:cornerRadius="25dp"
-
-                    android:padding="0dp"
-                    android:insetTop="0dp"
-                    android:insetBottom="0dp"
-                    android:insetLeft="0dp"
-                    android:insetRight="0dp"
-
-                    android:minWidth="0dp"
-                    android:minHeight="0dp"
-                    />
+                    android:src="@drawable/arrow_outward"
+                    app:tint="@color/white"
+                    android:scaleType="fitCenter" />
 
             </LinearLayout>
 
@@ -122,38 +118,31 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="50"
-                android:background="#C9E0DD"
+                android:background="@drawable/background_radius"
+                android:backgroundTint="@color/green"
                 android:orientation="vertical"
-                android:padding="20dp">
+                android:paddingTop="15dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="0dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/subject_culture"
                     android:textSize="20dp"
-                    android:layout_marginBottom="40dp"
+                    android:layout_marginBottom="20dp"
+                    android:textColor="@color/white"
+                    android:textFontWeight="600"
                     />
 
-                <Button
+                <ImageView
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
                     android:layout_gravity="end"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:text=">"
-                    android:textColor="#252525"
-
-                    app:backgroundTint="#f2f2f2"
-
-                    app:cornerRadius="25dp"
-
-                    android:padding="0dp"
-                    android:insetTop="0dp"
-                    android:insetBottom="0dp"
-                    android:insetLeft="0dp"
-                    android:insetRight="0dp"
-
-                    android:minWidth="0dp"
-                    android:minHeight="0dp"
-                    />
+                    android:src="@drawable/arrow_outward"
+                    app:tint="@color/white"
+                    android:scaleType="fitCenter" />
             </LinearLayout>
         </LinearLayout>
 

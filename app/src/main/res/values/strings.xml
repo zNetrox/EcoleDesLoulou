@@ -1,13 +1,13 @@
 <resources>
     <!-- all -->
     <string name="app_name">ÉcoleDesLoulou</string>
-    <string name="exercices">exercices</string>
+    <string name="exercices">Exercices</string>
     <string name="first_name">Prenom :</string>
     <string name="last_name">Nom :</string>
     <string name="login">Login :</string>
 
     <!-- subject -->
-    <string name="subject_maths_geo">Mathématique et Geometrie</string>
+    <string name="subject_maths_geo">Maths et Geometrie</string>
     <string name="subject_culture">Culture Général</string>
 
     <!-- exercices -->

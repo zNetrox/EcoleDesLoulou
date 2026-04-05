@@ -10,6 +10,7 @@ import androidx.core.view.WindowInsetsCompat;
 import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 public class AccueilActivity extends AppCompatActivity {
 
@@ -24,7 +25,7 @@ public class AccueilActivity extends AppCompatActivity {
             return insets;
         });
 
-        Button btnMaths = findViewById(R.id.btn_maths_exercices);
+        LinearLayout btnMaths = findViewById(R.id.btn_maths_exercices);
         // Button btnMaths = findViewById(R.id.btn_culture_general_exercices);
 
 
