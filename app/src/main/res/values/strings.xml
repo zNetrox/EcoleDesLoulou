@@ -1,0 +1,34 @@
+<resources>
+    <!-- all -->
+    <string name="app_name">ÉcoleDesLoulou</string>
+    <string name="exercices">exercices</string>
+    <string name="first_name">Prenom :</string>
+    <string name="last_name">Nom :</string>
+    <string name="login">Login :</string>
+
+    <!-- subject -->
+    <string name="subject_maths_geo">Mathématique et Geometrie</string>
+    <string name="subject_culture">Culture Général</string>
+
+    <!-- exercices -->
+    <string name="exercice_additions">Additions</string>
+    <string name="exercice_additions_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
+
+
+    <!-- index -->
+    <string name="index_welcome_part_1">Salut, </string>
+    <string name="index_welcome_part_2">Prêt à s\'entraîner de nouveau ?</string>
+    <string name="index_subject">Matiéres</string>
+
+    <!-- list exercice maths -->
+
+    <!-- sign up -->
+    <string name="sign_up_title">On commence içi</string>
+    <string name="sign_up_form_title">Créer un compte</string>
+
+    <!-- login -->
+    <string name="login_title">On reprend içi</string>
+    <string name="login_form_title">Créer un compte</string>
+
+
+</resources>
