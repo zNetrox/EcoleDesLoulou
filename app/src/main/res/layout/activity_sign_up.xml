@@ -127,8 +127,8 @@
                 android:text="Créer"
                 android:layout_gravity="center"
                 app:cornerRadius="8dp"
-                android:textColor="#f2f2f2"
-                app:backgroundTint="#BEC8F9" />
+                android:textColor="@color/white"
+                app:backgroundTint="@color/blue" />
 
             <!-- ligne -->
 
@@ -140,6 +140,7 @@
                 android:layout_marginBottom="15dp" />
 
             <Button
+                android:id="@+id/btn_back_to_login"
                 android:layout_width="175dp"
                 android:layout_height="wrap_content"
                 android:textColor="#BEC8F9"

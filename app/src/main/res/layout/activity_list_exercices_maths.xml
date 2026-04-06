@@ -27,7 +27,7 @@ android:background="#f2f2f2"
         android:layout_height="match_parent"
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:layout_marginBottom="20dp">
+        android:layout_marginBottom="10dp">
 
         <!-- btn retour -->
         <ImageButton
@@ -92,7 +92,6 @@ android:background="#f2f2f2"
         android:backgroundTint="@color/blue"
         android:orientation="horizontal"
         android:padding="20dp"
-        android:layout_marginRight="20dp"
         android:weightSum="100"
         >
 

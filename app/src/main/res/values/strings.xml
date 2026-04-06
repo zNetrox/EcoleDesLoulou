@@ -16,7 +16,7 @@
 
 
     <!-- index -->
-    <string name="index_welcome_part_1">Salut, </string>
+    <string name="index_welcome_part_1">Salut ..., </string>
     <string name="index_welcome_part_2">Prêt à s\'entraîner de nouveau ?</string>
     <string name="index_subject">Matiéres</string>
 

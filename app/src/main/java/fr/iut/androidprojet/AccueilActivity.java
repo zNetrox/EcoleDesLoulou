@@ -11,8 +11,13 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.TextView;
 
 public class AccueilActivity extends AppCompatActivity {
+    // VIEW
+    private LinearLayout btnMaths;
+    private TextView welcome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,10 +30,16 @@ public class AccueilActivity extends AppCompatActivity {
             return insets;
         });
 
-        LinearLayout btnMaths = findViewById(R.id.btn_maths_exercices);
-        // Button btnMaths = findViewById(R.id.btn_culture_general_exercices);
+        // Récupérer les vues
+        btnMaths = findViewById(R.id.btn_maths_exercices);
+        welcome = findViewById(R.id.welcome);
 
+        String userName = getSharedPreferences("USER_PREFS", MODE_PRIVATE)
+                .getString("user_name", "Invité"); // met Invité si rien n'est trouvé
 
+        welcome.setText("Salut " + userName + ",");
+
+        // --- REDIRECTION
         // exercies maths / geometrie
         btnMaths.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,6 +60,4 @@ public class AccueilActivity extends AppCompatActivity {
             }
         });
     }
-
-
 }
