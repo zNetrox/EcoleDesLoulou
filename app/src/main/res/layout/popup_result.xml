@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:gravity="center"
+    android:background="@drawable/background_radius"
+    android:backgroundTint="@color/beige"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/pop_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bravo !"
+            android:textSize="32dp"
+            android:textFontWeight="600"
+            android:layout_marginBottom="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tu as eu "
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/pop_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="... / ..."
+                android:textFontWeight="600"
+                android:textSize="20dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="en seulement "
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/pop_timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="..."
+                android:textFontWeight="600"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" sec"
+                android:textSize="20dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:layout_marginTop="40dp"
+            >
+
+            <Button
+                android:id="@+id/pop_btn_correct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:text="Corriger"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/beige"
+                android:gravity="left|center"
+                android:padding="0dp"/>
+
+
+
+            <Button
+                android:id="@+id/pop_btn_ok"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Retourner au menu"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/beige"
+                android:layout_weight="50"
+                android:gravity="right|center"
+                android:padding="0dp"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

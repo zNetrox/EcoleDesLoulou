@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:gravity="center"
+    android:background="@drawable/background_radius"
+    android:backgroundTint="@color/beige"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/pop_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="..."
+            android:textSize="32dp"
+            android:textFontWeight="600"
+            android:layout_marginBottom="20dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choisis la difficulté :"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Premier nombre :" />
+
+        <RadioGroup
+            android:id="@+id/group_digit1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="15dp">
+
+            <RadioButton
+                android:id="@+id/btn_d1_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1-9"
+                android:button="@null"
+                android:padding="10dp"
+                android:layout_margin="5dp"
+                android:checked="true"
+                android:background="@drawable/radio_selector"/>
+
+            <RadioButton
+                android:id="@+id/btn_d1_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10-99"
+                android:button="@null"
+                android:padding="10dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/radio_selector"/>
+
+            <RadioButton
+                android:id="@+id/btn_d1_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100-999"
+                android:button="@null"
+                android:padding="10dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/radio_selector"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Deuxième nombre :" />
+
+        <RadioGroup
+            android:id="@+id/group_digit2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="15dp">
+
+            <RadioButton
+                android:id="@+id/btn_d2_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1-9"
+                android:button="@null"
+                android:padding="10dp"
+                android:layout_margin="5dp"
+                android:checked="true"
+                android:background="@drawable/radio_selector"/>
+
+            <RadioButton
+                android:id="@+id/btn_d2_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10-99"
+                android:button="@null"
+                android:padding="10dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/radio_selector"/>
+
+            <RadioButton
+                android:id="@+id/btn_d2_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100-999"
+                android:button="@null"
+                android:padding="10dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/radio_selector"/>
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:layout_marginTop="40dp"
+            >
+
+            <Button
+                android:id="@+id/btn_back"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Retourner au menu"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/beige"
+                android:layout_weight="50"
+                android:gravity="left|center"
+                android:padding="0dp"
+                />
+
+            <Button
+                android:id="@+id/btn_start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Commencer"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/beige"
+                android:layout_weight="50"
+                android:gravity="right|center"
+                android:padding="0dp"
+                />
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

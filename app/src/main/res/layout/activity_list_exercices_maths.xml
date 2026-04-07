@@ -1,144 +1,320 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:id="@+id/main"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-tools:context=".ListExercicesMathsActivity"
-android:background="#f2f2f2"
-    >
-
-<!-- banner -->
-<LinearLayout
-    android:id="@id/top"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="20dp"
-    android:background="@drawable/banner"
+    android:layout_height="match_parent"
+    tools:context=".ListExercicesMathsActivity"
+    android:background="@color/white">
 
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent">
-
+    <!-- banner -->
     <LinearLayout
+        android:id="@id/top"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:layout_marginBottom="10dp">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:background="@drawable/banner"
 
-        <!-- btn retour -->
-        <ImageButton
-            android:id="@+id/btnBack"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/arrow"
-            android:scaleType="fitCenter"
-            android:padding="16dp"
-            android:rotation="180"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            app:tint="@color/black"/>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
-        <!-- name app -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/app_name"
-            android:textSize="20dp"
-            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="10dp">
 
+            <!-- btn retour -->
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/arrow"
+                android:scaleType="fitCenter"
+                android:padding="16dp"
+                android:rotation="180"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                app:tint="@color/black"/>
+
+            <!-- name app -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textSize="20dp"
+                />
+
+        </LinearLayout>
+
+        <!-- welcome texte -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/exercices"
+                android:textSize="20dp"
+                android:textFontWeight="300"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/subject_maths_geo"
+                android:layout_marginBottom="20dp"
+                android:textSize="32dp"/>
+
+        </LinearLayout>
     </LinearLayout>
 
-    <!-- welcome texte -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/exercices"
-            android:textSize="20dp"
-            android:textFontWeight="300"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/subject_maths_geo"
-            android:layout_marginBottom="20dp"
-            android:textSize="32dp"/>
-
-    </LinearLayout>
-</LinearLayout>
-
-<!-- main -->
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:weightSum="100"
-    app:layout_constraintTop_toBottomOf="@id/top"
-    android:orientation="vertical"
-    android:padding="20dp">
-
-
-    <!-- card -->
+    <!-- main -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/background_radius"
-        android:backgroundTint="@color/blue"
-        android:orientation="horizontal"
-        android:padding="20dp"
         android:weightSum="100"
-        >
+        app:layout_constraintTop_toBottomOf="@id/top"
+        android:orientation="vertical"
+        android:padding="20dp">
 
-        <!-- titre + desc -->
+
+        <!-- card Addition-->
         <LinearLayout
-            android:layout_weight="75"
-            android:layout_width="0dp"
+            android:id="@+id/addition"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:background="@drawable/background_radius"
+            android:backgroundTint="@color/blue"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            android:weightSum="100"
+            android:layout_marginBottom="20dp"
             >
 
-            <TextView
-                android:layout_width="wrap_content"
+            <!-- titre + desc -->
+            <LinearLayout
+                android:layout_weight="75"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@string/exercice_additions"
-                android:layout_marginBottom="5dp"
-                android:textSize="20dp"/>
+                android:orientation="vertical"
+                >
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/exercice_additions_desc"
-                android:textSize="12dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/exercice_additions"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="20dp"
+                    android:textColor="@color/white"
+                    android:textFontWeight="600"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/exercice_additions_desc"
+                    android:textSize="12dp"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="25"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                >
+
+                <ImageView
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:src="@drawable/arrow"
+                    android:contentDescription="Arrow" />
+
+
+            </LinearLayout>
 
         </LinearLayout>
 
+        <!-- card Soustraction-->
         <LinearLayout
-            android:layout_weight="25"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:gravity="center_vertical"
+            android:id="@+id/soustraction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_radius"
+            android:backgroundTint="@color/blue"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            android:weightSum="100"
+            android:layout_marginBottom="20dp"
             >
 
-            <ImageView
-                android:layout_width="75dp"
-                android:layout_height="75dp"
-                android:src="@drawable/arrow"
-                android:contentDescription="Arrow" />
+            <!-- titre + desc -->
+            <LinearLayout
+                android:layout_weight="75"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/exercice_soustractions"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="20dp"
+                    android:textColor="@color/white"
+                    android:textFontWeight="600"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/exercice_soustractions_desc"
+                    android:textSize="12dp"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="25"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                >
+
+                <ImageView
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:src="@drawable/arrow"
+                    android:contentDescription="Arrow" />
+
+
+            </LinearLayout>
 
         </LinearLayout>
+
+        <!-- card Multiplication-->
+        <LinearLayout
+            android:id="@+id/multiplication"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_radius"
+            android:backgroundTint="@color/blue"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            android:weightSum="100"
+            android:layout_marginBottom="20dp"
+            >
+
+            <!-- titre + desc -->
+            <LinearLayout
+                android:layout_weight="75"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/exercice_Multiplications"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="20dp"
+                    android:textColor="@color/white"
+                    android:textFontWeight="600"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/exercice_Multiplications_desc"
+                    android:textSize="12dp"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="25"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                >
+
+                <ImageView
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:src="@drawable/arrow"
+                    android:contentDescription="Arrow" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- card Division-->
+        <LinearLayout
+            android:id="@+id/division"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_radius"
+            android:backgroundTint="@color/blue"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            android:weightSum="100"
+            >
+
+            <!-- titre + desc -->
+            <LinearLayout
+                android:layout_weight="75"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/exercice_divisions"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="20dp"
+                    android:textColor="@color/white"
+                    android:textFontWeight="600"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/exercice_divisions_desc"
+                    android:textSize="12dp"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="25"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                >
+
+                <ImageView
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:src="@drawable/arrow"
+                    android:contentDescription="Arrow" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
 
     </LinearLayout>
-
-
-</LinearLayout>
 
 
 

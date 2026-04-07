@@ -6,8 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SignUpActivity"
-    android:background="#f2f2f2"
-    >
+    android:background="@color/white">
 
     <!-- banner -->
     <LinearLayout
@@ -122,7 +121,7 @@
 
             <Button
                 android:id="@+id/sign_up_btn"
-                android:layout_width="175dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Créer"
                 android:layout_gravity="center"
@@ -141,7 +140,7 @@
 
             <Button
                 android:id="@+id/btn_back_to_login"
-                android:layout_width="175dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#BEC8F9"
                 app:strokeColor="#AEC4FF"

@@ -13,7 +13,12 @@
     <!-- exercices -->
     <string name="exercice_additions">Additions</string>
     <string name="exercice_additions_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
-
+    <string name="exercice_Multiplications">Multiplications</string>
+    <string name="exercice_Multiplications_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
+    <string name="exercice_soustractions">soustractions</string>
+    <string name="exercice_soustractions_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
+    <string name="exercice_divisions">Divisions</string>
+    <string name="exercice_divisions_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
 
     <!-- index -->
     <string name="index_welcome_part_1">Salut ..., </string>
