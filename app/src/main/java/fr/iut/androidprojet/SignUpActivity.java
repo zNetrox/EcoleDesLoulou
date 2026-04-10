@@ -28,17 +28,6 @@ public class SignUpActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        /*
-        super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_login);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
-        */
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
@@ -47,8 +36,8 @@ public class SignUpActivity extends AppCompatActivity {
 
         // Récupérer les vues
         editTextLogin = findViewById(R.id.login);
-        editTextName = findViewById(R.id.sign_up_last_name);
-        editTextLastName = findViewById(R.id.sign_up_first_name);
+        editTextName = findViewById(R.id.sign_up_first_name);
+        editTextLastName = findViewById(R.id.sign_up_last_name);
         btnSave = findViewById(R.id.sign_up_btn);
         btnBackToLogin = findViewById(R.id.btn_back_to_login);
 
@@ -106,7 +95,7 @@ public class SignUpActivity extends AppCompatActivity {
             @Override
             protected Student doInBackground(Void... voids) {
 
-                // creating a task
+                // creating a student
                 Student student = new Student();
                 student.setLogin(sLogin);
                 student.setName(sName);
@@ -117,10 +106,7 @@ public class SignUpActivity extends AppCompatActivity {
                         .studentDAO()
                         .insert(student);
 
-                // mettre à jour l'id de la tache
-                // Nécessaire si on souhaite avoir accès à l'id plus tard dans l'activité
                 student.setId(id);
-
 
                 return student;
             }

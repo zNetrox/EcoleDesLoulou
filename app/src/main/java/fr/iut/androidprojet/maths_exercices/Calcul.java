@@ -1,8 +1,5 @@
 package fr.iut.androidprojet.maths_exercices;
 
-
-// TODO ne pas avoir de resultat negatif
-
 public class Calcul {
     private char operator;
     private int operand1;

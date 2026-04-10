@@ -42,14 +42,21 @@ public class MathsExercice {
         return listCalcul.get(currentCalculIndex);
     }
 
+    public boolean canGoNextQuestion() {
+        return currentCalculIndex < nbCalcul - 1;
+    }
+
+    public boolean canGoPreviousQuestion() {
+        return currentCalculIndex > 0;
+    }
     public void previousCalcul() {
-        if(currentCalculIndex > 0) {
+        if(canGoPreviousQuestion()) {
             currentCalculIndex--;
         }
     }
 
     public void nextCalcul() {
-        if(currentCalculIndex < nbCalcul - 1) {
+        if(canGoNextQuestion()) {
             currentCalculIndex++;
         }
     }
@@ -71,6 +78,7 @@ public class MathsExercice {
         this.setCorrectionMode(true);
     }
 
+    // chrono
     public long getTimeWhenStopped() {
         return timeWhenStopped;
     }

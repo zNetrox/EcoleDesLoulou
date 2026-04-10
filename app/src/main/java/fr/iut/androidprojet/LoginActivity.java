@@ -7,13 +7,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,16 +32,6 @@ public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        /*
-        super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_login);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
-        */
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
@@ -76,7 +61,6 @@ public class LoginActivity extends AppCompatActivity {
                 // Récuperer l'étudiant
                 Student student = adapter.getItem(position);
 
-                // 2. Sauvegarder son nom dans les SharedPreferences
                 getSharedPreferences("USER_PREFS", MODE_PRIVATE)
                         .edit()
                         .putString("user_full_name", student.getFullName())

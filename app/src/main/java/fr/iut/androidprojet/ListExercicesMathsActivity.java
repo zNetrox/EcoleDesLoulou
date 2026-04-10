@@ -3,6 +3,7 @@ package fr.iut.androidprojet;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -19,8 +20,7 @@ public class ListExercicesMathsActivity extends AppCompatActivity {
     private LinearLayout exerciceSoustraction;
     private LinearLayout exerciceMultiplication;
     private LinearLayout exerciceDivision;
-
-    private TextView welcome;
+    private ImageButton btnBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,8 +38,18 @@ public class ListExercicesMathsActivity extends AppCompatActivity {
         exerciceSoustraction = findViewById(R.id.soustraction);
         exerciceMultiplication = findViewById(R.id.multiplication);
         exerciceDivision = findViewById(R.id.division);
+        btnBack = findViewById(R.id.btn_back);
+
 
         // --- REDIRECTION
+        // retour
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getOnBackPressedDispatcher().onBackPressed();
+            }
+        });
+
         // Addition
         exerciceAddition.setOnClickListener(new View.OnClickListener() {
             @Override

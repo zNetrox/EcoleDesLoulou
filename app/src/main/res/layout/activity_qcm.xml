@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QCMActivity"
+    android:background="@color/white">
+
+    <!-- banner -->
+    <LinearLayout
+        android:id="@id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:background="@drawable/banner"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="20dp"
+
+            android:layout_marginBottom="20dp" />
+
+        <!-- welcome texte -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/question_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Question .../..."
+                android:textSize="20dp"
+                android:textFontWeight="300"/>
+
+            <TextView
+                android:id="@+id/exercice_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="..."
+
+                android:textSize="32dp"/>
+
+            <Chronometer
+                android:id="@+id/chrono"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginBottom="20dp"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- main -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="100"
+        app:layout_constraintTop_toBottomOf="@id/top"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/correction_indication"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="20dp"
+            android:textFontWeight="300"
+            android:visibility="gone"/>
+
+
+        <TextView
+            android:id="@+id/question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="............... ?"
+            android:layout_marginBottom="20dp"
+            android:textSize="32dp"/>
+
+        <Button
+            android:id="@+id/answer_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="..."
+            android:textColor="@color/black"
+            app:strokeColor="@color/blue"
+            app:strokeWidth="2dp"
+            app:cornerRadius="8dp"
+            android:layout_marginBottom="20dp"
+            app:backgroundTint="@color/white" />
+
+        <Button
+            android:id="@+id/answer_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="..."
+            android:textColor="@color/black"
+            app:strokeColor="@color/blue"
+            app:strokeWidth="2dp"
+            app:cornerRadius="8dp"
+            android:layout_marginBottom="20dp"
+            app:backgroundTint="@color/white" />
+
+        <Button
+            android:id="@+id/answer_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="..."
+            android:textColor="@color/black"
+            app:strokeColor="@color/blue"
+            app:strokeWidth="2dp"
+            app:cornerRadius="8dp"
+            android:layout_marginBottom="20dp"
+            app:backgroundTint="@color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            >
+
+            <Button
+                android:id="@+id/previous"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:text="Précedent"
+                android:layout_gravity="center"
+                app:cornerRadius="8dp"
+                android:textColor="@color/white"
+                app:backgroundTint="@color/blue" />
+
+            <View
+                android:layout_width="80dp"
+                android:layout_height="match_parent">
+            </View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="50"
+                >
+
+                <Button
+                    android:id="@+id/next"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Suivant"
+                    android:layout_gravity="center"
+                    app:cornerRadius="8dp"
+                    android:textColor="@color/white"
+                    app:backgroundTint="@color/blue" />
+
+                <Button
+                    android:id="@+id/finish"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Finir"
+                    android:layout_gravity="center"
+                    app:cornerRadius="8dp"
+                    android:textColor="@color/white"
+                    app:backgroundTint="@color/blue"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

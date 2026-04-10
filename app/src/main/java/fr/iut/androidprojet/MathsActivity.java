@@ -1,6 +1,7 @@
 package fr.iut.androidprojet;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.text.format.DateUtils;
@@ -13,7 +14,7 @@ import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 
-import androidx.appcompat.app.AlertDialog; // TODO a supprimer
+import androidx.appcompat.app.AlertDialog;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -141,15 +142,14 @@ public class MathsActivity extends AppCompatActivity {
                 answer.setEnabled(false); // bloque l'input
 
                 correctionIndication.setText("Bravo, c'est la bonne réponse !");
-                correctionIndication.setTextColor(getResources().getColor(android.R.color.holo_green_dark));
+                correctionIndication.setTextColor(Color.parseColor("#C9E0DD"));
             }
             // reponse vide / fausse
             else {
                 answer.setEnabled(true);
 
                 // On remet en rouge pour signaler l'erreur
-                correctionIndication.setTextColor(getResources().getColor(android.R.color.holo_red_dark));
-
+                correctionIndication.setTextColor(Color.parseColor("#B20000"));
                 if (oldAnswer != null) {
                     answer.setText(String.valueOf(oldAnswer));
 

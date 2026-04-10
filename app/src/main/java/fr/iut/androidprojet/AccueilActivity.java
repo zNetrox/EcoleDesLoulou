@@ -17,6 +17,7 @@ import android.widget.TextView;
 public class AccueilActivity extends AppCompatActivity {
     // VIEW
     private LinearLayout btnMaths;
+    private LinearLayout btnCulture;
     private TextView welcome;
 
     @Override
@@ -32,10 +33,11 @@ public class AccueilActivity extends AppCompatActivity {
 
         // Récupérer les vues
         btnMaths = findViewById(R.id.btn_maths_exercices);
+        btnCulture = findViewById(R.id.btn_culture_exercices);
         welcome = findViewById(R.id.welcome);
 
         String userName = getSharedPreferences("USER_PREFS", MODE_PRIVATE)
-                .getString("user_name", "Invité"); // met Invité si rien n'est trouvé
+                .getString("user_name", "Invité");
 
         welcome.setText("Salut " + userName + ",");
 
@@ -51,10 +53,10 @@ public class AccueilActivity extends AppCompatActivity {
         });
 
         // exercies culture général
-        btnMaths.setOnClickListener(new View.OnClickListener() {
+        btnCulture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AccueilActivity.this, ListExercicesMathsActivity.class);
+                Intent intent = new Intent(AccueilActivity.this, ListExercicesCultureActivity.class);
 
                 startActivity(intent);
             }
